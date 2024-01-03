@@ -1,0 +1,36 @@
+---
+import { getImage } from "astro:assets";
+import bgImage from "../assets/pexels-david-bartus-435471.jpg";
+
+const optimizedImage = await getImage({ src: bgImage });
+---
+
+<div
+  style={`background-image: url('${optimizedImage.src}')`}
+  class="panel-container flex flex-col md:flex-row justify-center overflow-x-hidden w-[400%] h-screen grayscale"
+>
+  <slot />
+</div>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let sections = gsap.utils.toArray(".panel");
+
+  gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".panel-container",
+      pin: true,
+      scrub: 1,
+      snap: 1 / (sections.length - 1),
+      end: () =>
+        "+=" +
+        document.querySelector<HTMLElement>(".panel-container")?.offsetWidth,
+    },
+  });
+</script>

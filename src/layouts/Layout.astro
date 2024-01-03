@@ -3,8 +3,6 @@ interface Props {
   title: string;
 }
 
-import Navbar from "../components/Navbar.astro";
-
 const { title } = Astro.props;
 ---
 
@@ -18,8 +16,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-mono bg-neutral-50">
-    <Navbar />
+  <body class="font-mono bg-neutral-50 overflow-x-hidden">
     <slot />
   </body>
 </html>

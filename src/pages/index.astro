@@ -1,53 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import CardContainer from "../components/CardContainer.astro";
 import Card from "../components/Card.astro";
-import Presentation from "../components/Presentation.jsx";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="px-2 md:px-8">
-    <Presentation client:load />
-    <ul role="list" class="flex flex-col items-center gap-2">
-      <Card
-        id="about"
-        title="About me"
-        body="Hi! I'm Claudio, a backend develeper with the dream of being a fullstack dev in the future"
-      />
-      <Card
-        id="experience"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        id="work"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        id="projects"
-        title="Community"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ante risus. Pellentesque ac accumsan risus. Nam nec mollis metus, ac vulputate massa. Aenean quis magna arcu. Vivamus tempus nisi aliquam, mattis ante sit amet, ultricies neque. Duis risus risus, suscipit id fringilla eu, sollicitudin vel felis. Curabitur sit amet diam risus."
-      />
-      <Card
-        id=""
-        title="Community"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ante risus. Pellentesque ac accumsan risus. Nam nec mollis metus, ac vulputate massa. Aenean quis magna arcu. Vivamus tempus nisi aliquam, mattis ante sit amet, ultricies neque. Duis risus risus, suscipit id fringilla eu, sollicitudin vel felis. Curabitur sit amet diam risus."
-      />
-      <Card
-        id=""
-        title="Community"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ante risus. Pellentesque ac accumsan risus. Nam nec mollis metus, ac vulputate massa. Aenean quis magna arcu. Vivamus tempus nisi aliquam, mattis ante sit amet, ultricies neque. Duis risus risus, suscipit id fringilla eu, sollicitudin vel felis. Curabitur sit amet diam risus."
-      />
-      <Card
-        id=""
-        title="Community"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ante risus. Pellentesque ac accumsan risus. Nam nec mollis metus, ac vulputate massa. Aenean quis magna arcu. Vivamus tempus nisi aliquam, mattis ante sit amet, ultricies neque. Duis risus risus, suscipit id fringilla eu, sollicitudin vel felis. Curabitur sit amet diam risus."
-      />
-      <Card
-        id=""
-        title="Community"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ante risus. Pellentesque ac accumsan risus. Nam nec mollis metus, ac vulputate massa. Aenean quis magna arcu. Vivamus tempus nisi aliquam, mattis ante sit amet, ultricies neque. Duis risus risus, suscipit id fringilla eu, sollicitudin vel felis. Curabitur sit amet diam risus."
-      />
-    </ul>
-  </main>
+  <CardContainer>
+    <Card
+      id="about"
+      title="About me"
+      body="Hi! I'm Claudio, a backend develeper with the dream of being a fullstack dev in the future"
+    />
+    <Card
+      id="experience"
+      title="Integrations"
+      body="Supercharge your project with new frameworks and libraries."
+    />
+    <Card
+      id="work"
+      title="Themes"
+      body="Explore a galaxy of community-built starter themes."
+    />
+    <Card
+      id="projects"
+      title="Community"
+      body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ante risus. Pellentesque ac accumsan risus. Nam nec mollis metus, ac vulputate massa. Aenean quis magna arcu. Vivamus tempus nisi aliquam, mattis ante sit amet, ultricies neque. Duis risus risus, suscipit id fringilla eu, sollicitudin vel felis. Curabitur sit amet diam risus."
+    />
+  </CardContainer>
 </Layout>
